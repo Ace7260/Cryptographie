@@ -1,7 +1,9 @@
+
 import java.util.Scanner;
 
 public class Modulo {
     /*********Pour les Fractions a/bmodc***********/
+    //pour la forme -a/b mod c
     static int ModuloNeg(int a, int b, int c){
         int result=a;
         if(a<b){
@@ -17,9 +19,12 @@ public class Modulo {
     static int ModuloPositif(int a, int b){
         return a%b;
     }
-    int ModuloPosi_Negtif(int a,int b,int c){
-
-        return 1;
+    //pour la forme -a mob b
+    static int ModuloPosi_Negtif(int a, int b){
+           do{
+               a=a+b;
+           }while(a<0);
+        return a;
     }
     int Modulo_Neg_Neg(int a,int b,int c){
         return 1;
